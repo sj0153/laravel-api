@@ -27,7 +27,15 @@ Route::get('/suppliers/{id}', [SupplierController::class, 'show']);
 Route::get('/suppliers/search/{name}', [SupplierController::class, 'search']);
 
 
-
+Route::group(['middleware'=>['auth:sanctum']], function () {
+    Route::post('/products',[ProductController::class, 'store']);
+    Route::put('/products/{id}', [ProductController::class, 'update']);
+    Route::delete('/products/{id}', [ProductController::class, 'destroy']);
+    Route::post('/suppliers',[SupplierController::class, 'store']);
+    Route::put('/suppliers/{id}', [SupplierController::class, 'update']);
+    Route::delete('/suppliers/{id}', [SupplierController::class, 'destroy']);
+    Route::post('/logout',[AuthController::class, 'logout']);
+});
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
