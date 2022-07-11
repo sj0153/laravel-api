@@ -23,7 +23,10 @@ class DatabaseSeeder extends Seeder
 
 
 
-        
+        $supplier1 = Supplier::create(['name'=>"Soko Štark d.o.o",'contact'=>"kontaktcentarSRB@atlanticgrupa.com",'p&s'=>"slatkiši, flipsi, keks i čokolade"]);
+        $supplier2 = Supplier::create(['name'=>"Nestle Adrianic S d.o.o.",'contact'=>"0800 000 100",'p&s'=>"hranu za bebe, medicinsku hranu, flaširanu vodu, žitarice za doručak, kafu i čaj, slatkiše, mlečne proizvode, sladoled, smrznutu hranu, hranu za kućne ljubimce"]);
+        $supplier3 = Supplier::create(['name'=>"Swisslion d.o.o.",'contact'=>"0800 122 122",'p&s'=>"čokolade, krem, medenjaci, keks, žele proizvodi i sladoledi"]);
+        $supplier4 = Supplier::create(['name'=>"Coca-Cola HBC-Srbija d.o.o",'contact'=>"kupac@cchellenic.com",'p&s'=>"bezalkoholna gazirana pića"]);
         
         $product1 = Product::create(['name' => "Štark smoki",'description' => "flips sa kikirikijem", 'price' => "36.99", 'supplier_id' => $supplier1->id,'supplier_name'=>$supplier1->name]);
         $product2 = Product::create(['name' => "Najlepše želje Soko štark",'description' => "mlečna čokolada sa visokim sadržajem mleka", 'price' => "199.99", 'supplier_id' => $supplier1->id,'supplier_name'=>$supplier1->name]);
