@@ -33,6 +33,6 @@ class DatabaseSeeder extends Seeder
         $product3 = Product::create(['name' => "Nestle Crunch",'description' => "čokoladni desert od mlečne čokolade sa žitom", 'price' => "167.99", 'supplier_id' => $supplier2->id,'supplier_name'=>$supplier2->name]);
         $product4 = Product::create(['name' => "Swisslion choco biscuit",'description' => "mlečna čokolada sa keksom sa maslacem", 'price' => "169.99", 'supplier_id' => $supplier3->id,'supplier_name'=>$supplier3->name]);
         $product5 = Product::create(['name' => "Coca-Cola 330ml",'description' => "osvežavajuće bezalkoholno piće", 'price' => "68.99", 'supplier_id' => $supplier4->id,'supplier_name'=>$supplier4->name]);
-        $product5 = Product::create(['name' => "Fanta narandža 2l",'description' => "osvežavajuće bezalkoholno piće sa ukusom narandže", 'price' => "140.00", 'supplier_id' => $supplier4->id,'supplier_name'=>$supplier4->name]);
+        $product6 = Product::create(['name' => "Fanta narandža 2l",'description' => "osvežavajuće bezalkoholno piće sa ukusom narandže", 'price' => "140.00", 'supplier_id' => $supplier4->id,'supplier_name'=>$supplier4->name]);
     }
 }
